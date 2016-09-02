@@ -31,18 +31,25 @@ function appendJSONP(){
 // Callback for JSONP response
 
 function retrieveQuote(data) {
+    quoteText.classList.add("fade-out");
     updateDom(data);
     var script = document.getElementsByTagName('script')[0];
     head.removeChild(script);
 }
 
+// Check computed style first
+
+
+
 
 // Change quote and update DOM function & update Tweet button
 
 function updateDom(data) {
-    quoteText.innerHTML = data.quoteText;
-    quoteAuthor.innerHTML = data.quoteAuthor;
-    tweet.href = "https://twitter.com/intent/tweet?text='" +data.quoteText+ "' - " +data.quoteAuthor;
+    var quote = data.quoteText;
+    var author = data.quoteAuthor || 'Anonymous';
+    quoteText.innerHTML = quote;
+    quoteAuthor.innerHTML = author;
+    tweet.href = "https://twitter.com/intent/tweet?text='" +quote+ "' - " +author;
 }
 
 // Generate on load

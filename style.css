@@ -1,3 +1,112 @@
 * {
     box-sizing: border-box;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.arial {
+    font-family: Arial, sans-serif;
+}
+
+.times {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* positioning */
+
+.container {
+    margin: 35px auto 0px auto;
+    max-width: 1000px;
+    padding: 30px;
+    min-height: 60px;
+    position: relative;
+}
+
+
+/*-- quote --*/
+
+#quote {
+    text-align: center;
+    font-size: 25px;
+}
+
+#quote:before {
+    content: open-quote;
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#quote:after {
+    content: close-quote;
+    font-size: 60px;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+}
+
+
+/*-- author --*/
+
+#author {
+    text-align: right;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+#author:before {
+    content: "- "
+}
+
+
+/*-- buttons --*/
+
+#button-container {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 45%;
+}
+
+#generate {
+   width: 120px;
+   height: 30px;
+   border: 1px solid black;
+   background: #eeeeee;
+   cursor: pointer;
+}
+
+#tweet-button {
+   width: 120px;
+   height: 30px;
+   background: #1da1f2;
+   border: 1px solid #1da1f2;
+   border: none;
+}
+
+p {
+   transition: opacity 1s ease-out;
+}
+
+/*--- transitions --*/
+
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/***- media ***/
+
+@media screen and (max-width: 720px) {
+    #button-container {
+        top: 80%;
+    }
+}

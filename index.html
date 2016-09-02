@@ -6,21 +6,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Random Quote Generator</title>
-    <link href="normalize.css" type="text/css">
-    <link href="style.css" type="text/css">
+    <link href="normalize.css" type="text/css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="quote-container">
-    <div id="quote"></div>
-    <div id="author"></div>
-</div>
+    <div class="container times"><p id="quote" class=""></p></div>
+    <div class="container times"><p id="author" class=""></p></div>
 
-<h2>Click here to generate random quote</h2>
-
-<button id="generate">Generate</button>
-<a href="" id="tweet" target="_blank">Tweet</a>
+    <div id="button-container">
+        <button id="generate" class="arial">Generate</button>
+        <button id="tweet-button" class="arial"><a href="" id="tweet" target="_blank">Tweet</a></button>
+    </div>
 
 <script src="app.js"></script>
 </body>
