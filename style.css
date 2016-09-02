@@ -7,6 +7,10 @@ a {
     color: white;
 }
 
+button:focus {
+    outline: 0;
+}
+
 .arial {
     font-family: Arial, sans-serif;
 }
@@ -18,9 +22,9 @@ a {
 /* positioning */
 
 .container {
-    margin: 35px auto 0px auto;
+    margin: 35px auto 10px auto;
     max-width: 1000px;
-    padding: 30px;
+    padding: 30px 50px;
     height: 100px;
     position: relative;
 }
@@ -95,6 +99,31 @@ p {
 
 .fade-out {
     opacity: 0;
+}
+
+
+/*--- Generate --*/
+
+.generate:before {
+    content: "Generate";
+}
+
+/*--- C --*/
+
+.c:before {
+    content: "c";
+}
+
+.c {
+    display: inline-block;
+    color: white;
+    animation: rotating .5s linear infinite;
+}
+
+
+@keyframes rotating {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }
 
 /***- media ***/

@@ -1,6 +1,7 @@
 // Set up HTML variables
 
 var button = document.getElementById('generate');
+var generateLoad = document.getElementById('generate-load');
 var quoteText = document.getElementById('quote');
 var quoteAuthor = document.getElementById('author');
 var tweet = document.getElementById('tweet');
@@ -22,6 +23,7 @@ button.addEventListener('click', function(){
 // Create JSONP script tag and append to head
 
 function appendJSONP(){
+    generateLoad.classList.add("c");
     var script = document.createElement('script');
     script.src = url;
     head.appendChild(script);
@@ -49,6 +51,8 @@ function updateDom(data) {
     quoteText.innerHTML = quote;
     quoteAuthor.innerHTML = author;
     quoteText.classList.remove("fade-out");
+    generateLoad.classList.remove("c");
+    generateLoad.classList.add("generate");
     tweet.href = "https://twitter.com/intent/tweet?text='" +quote+ "' - " +author;
 }
 
