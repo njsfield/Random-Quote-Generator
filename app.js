@@ -32,14 +32,13 @@ function appendJSONP(){
 
 function retrieveQuote(data) {
     quoteText.classList.add("fade-out");
-    updateDom(data);
-    var script = document.getElementsByTagName('script')[0];
-    head.removeChild(script);
+
+    setTimeout(function(){
+        updateDom(data);
+        var script = document.getElementsByTagName('script')[0];
+        head.removeChild(script);
+    },1000)
 }
-
-// Check computed style first
-
-
 
 
 // Change quote and update DOM function & update Tweet button
@@ -49,6 +48,7 @@ function updateDom(data) {
     var author = data.quoteAuthor || 'Anonymous';
     quoteText.innerHTML = quote;
     quoteAuthor.innerHTML = author;
+    quoteText.classList.remove("fade-out");
     tweet.href = "https://twitter.com/intent/tweet?text='" +quote+ "' - " +author;
 }
 
