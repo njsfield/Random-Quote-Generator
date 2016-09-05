@@ -30,3 +30,6 @@ When the JSON data is loaded, this class is then removed.
 Feel free to submit feedback, pull and & customise! 
 
 
+## View on Codepen
+
+[CHeck it out](http://codepen.io/njsfield/pen/kkYxpk)
