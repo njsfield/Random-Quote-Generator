@@ -32,4 +32,4 @@ Feel free to submit feedback, pull and & customise!
 
 ## View on Codepen
 
-[CHeck it out](http://codepen.io/njsfield/pen/kkYxpk)
+[Check it out](http://codepen.io/njsfield/pen/kkYxpk)
