@@ -10,7 +10,7 @@ var head = document.getElementsByTagName('head')[0];
 
 // Url of api
 
-var url = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=retrieveQuote";
+var url = "https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=retrieveQuote";
 
 
 // Event listener for button
